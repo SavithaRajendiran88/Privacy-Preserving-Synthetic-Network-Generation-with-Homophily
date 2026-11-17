@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# Downloaded datasets (fetched automatically on first run)
+data/
+
+# Generated results (large; reproduce with the commands in README.md)
+study/
+dp_results/
+moo_results/
+fyp_results/
+fyp_check/
+*_upload.zip
+fyp_results_*.zip
+*.pdf
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

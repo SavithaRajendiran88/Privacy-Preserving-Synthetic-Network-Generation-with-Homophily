@@ -1,0 +1,6 @@
+# only needed for stage3_moo_comparison/
+# CPU build of torch is enough: pip install torch --index-url https://download.pytorch.org/whl/cpu
+numba>=0.59
+torch>=2.2
+botorch>=0.12
+gpytorch>=1.12
