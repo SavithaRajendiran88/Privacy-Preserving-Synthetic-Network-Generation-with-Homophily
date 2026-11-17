@@ -1,0 +1,146 @@
+:root {
+  --ink: #1d1d1f;
+  --muted: #5b5b60;
+  --line: #e2e2e6;
+  --soft: #f6f6f8;
+  --accent: #1f5fae;
+  --accent-soft: #e8f0fa;
+  --max: 980px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 64px; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink);
+  background: #fff;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* navigation */
+.site-header {
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid var(--line);
+}
+.nav {
+  max-width: var(--max); margin: 0 auto; padding: 0 20px;
+  display: flex; align-items: center; justify-content: space-between; height: 54px;
+}
+.brand { font-weight: 600; color: var(--ink); }
+.nav-links a { color: var(--muted); font-size: 15px; margin-left: 18px; }
+.nav-links a:hover { color: var(--ink); text-decoration: none; }
+
+/* layout */
+main { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+section { padding: 48px 0 24px; border-bottom: 1px solid var(--line); }
+section:last-of-type { border-bottom: none; }
+
+h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: normal; line-height: 1.25; }
+h1 { font-size: 34px; margin: 8px auto 16px; max-width: 860px; }
+h2 { font-size: 28px; margin: 0 0 18px; }
+h3 { font-size: 20px; margin: 30px 0 10px; }
+
+/* hero */
+.hero { text-align: center; padding-top: 44px; }
+.eyebrow { color: var(--muted); font-size: 14px; letter-spacing: 0.04em; text-transform: uppercase; margin: 0; }
+.authors { font-size: 18px; margin: 0; }
+.affil { color: var(--muted); font-size: 15px; margin: 4px 0 20px; }
+.buttons { margin-bottom: 28px; }
+.btn {
+  display: inline-block; margin: 4px; padding: 8px 18px;
+  border: 1px solid var(--ink); border-radius: 4px; color: var(--ink); font-size: 15px;
+}
+.btn:hover { background: var(--soft); text-decoration: none; }
+.btn.primary { background: var(--ink); color: #fff; }
+.btn.primary:hover { background: #3a3a3e; }
+.hero-fig { text-align: left; }
+
+/* figures */
+figure { margin: 22px 0; }
+figure img { width: 100%; height: auto; border: 1px solid var(--line); border-radius: 4px; }
+figcaption { color: var(--muted); font-size: 14.5px; margin-top: 8px; }
+
+blockquote {
+  margin: 20px 0; padding: 14px 20px;
+  border-left: 3px solid var(--accent); background: var(--accent-soft);
+  font-style: italic;
+}
+
+.objectives li { margin-bottom: 8px; }
+
+/* stages */
+.stages { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0; }
+.stage { border: 1px solid var(--line); border-radius: 6px; padding: 16px 18px; background: var(--soft); }
+.stage h3 { margin: 4px 0 8px; font-size: 19px; }
+.stage p { margin: 0; font-size: 15.5px; }
+.stage-no { font-size: 13px; color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* tables */
+table { width: 100%; border-collapse: collapse; font-size: 15px; margin: 10px 0; }
+th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-weight: 600; background: var(--soft); }
+.num-table td:not(:first-child) { white-space: nowrap; }
+.note, .tools { color: var(--muted); font-size: 15px; }
+
+/* results */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 8px 0 10px; }
+.stat { border: 1px solid var(--line); border-radius: 6px; padding: 14px; }
+.stat .num { display: block; font-family: Georgia, serif; font-size: 23px; }
+.stat .lbl { display: block; color: var(--muted); font-size: 14px; line-height: 1.4; margin-top: 4px; }
+
+/* videos */
+.videos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.video h3 { margin: 10px 0 4px; font-size: 18px; }
+.video p { margin: 0; font-size: 15px; color: var(--muted); }
+.video-frame { position: relative; aspect-ratio: 16 / 9; background: var(--soft); border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
+.video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.placeholder { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 15px; }
+
+/* timeline */
+.timeline { list-style: none; padding: 0; margin: 0; border-left: 2px solid var(--line); }
+.timeline li { position: relative; display: grid; grid-template-columns: 140px 1fr; gap: 14px; padding: 0 0 18px 22px; }
+.timeline li::before {
+  content: ""; position: absolute; left: -7px; top: 7px; width: 12px; height: 12px;
+  border-radius: 50%; background: #fff; border: 2px solid var(--muted);
+}
+.timeline li.done::before { background: var(--accent); border-color: var(--accent); }
+.timeline li.milestone::before { background: var(--ink); border-color: var(--ink); }
+.timeline .when { color: var(--muted); font-size: 15px; }
+
+/* docs */
+pre { background: #f3f3f5; border: 1px solid var(--line); border-radius: 4px; padding: 14px 16px; overflow-x: auto; font-size: 14px; line-height: 1.5; }
+code { font-family: Consolas, Menlo, monospace; font-size: 0.9em; }
+.chapters dt { font-weight: 600; margin-top: 10px; }
+.chapters dd { margin: 2px 0 0 0; color: var(--muted); }
+
+/* team */
+.team { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.person { display: flex; gap: 16px; align-items: flex-start; border: 1px solid var(--line); border-radius: 6px; padding: 16px; }
+.person h3 { margin: 2px 0 4px; font-size: 19px; }
+.person p { margin: 0; color: var(--muted); font-size: 15px; }
+.avatar {
+  flex: none; width: 56px; height: 56px; border-radius: 50%;
+  background: var(--accent-soft); color: var(--accent);
+  display: flex; align-items: center; justify-content: center; font-weight: 600;
+}
+
+footer { max-width: var(--max); margin: 24px auto 0; padding: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+footer p { margin: 4px 0; }
+
+/* small screens */
+@media (max-width: 860px) {
+  .nav-links { display: none; }
+  .stages, .videos, .team { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .timeline li { grid-template-columns: 1fr; gap: 2px; }
+  h1 { font-size: 27px; }
+  .num-table { display: block; overflow-x: auto; }
+}
