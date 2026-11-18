@@ -34,7 +34,7 @@
   <p class="affil">Department of Computer Science and Engineering, Amrita School of Computing,<br>Amrita Vishwa Vidyapeetham, Coimbatore</p>
   <div class="buttons">
     <a class="btn primary" href="https://github.com/SavithaRajendiran88/Privacy-Preserving-Synthetic-Network-Generation-with-Homophily">GitHub repository</a>
-    <a class="btn" href="#demo">Demo videos</a>
+    <a class="btn" href="#demo">Demo video</a>
     <a class="btn" href="#docs">Documentation</a>
   </div>
   <figure class="hero-fig">
@@ -164,33 +164,13 @@
 </section>
 
 <section id="demo">
-  <h2>Demonstration videos</h2>
-  <div class="videos">
-    <div class="video">
-      <div class="video-frame">
-        <!-- Replace VIDEO_ID_1 with the YouTube video id and remove the placeholder div below -->
-        <!-- <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID_1" title="Project overview" allowfullscreen></iframe> -->
-        <div class="placeholder">Video coming soon</div>
-      </div>
-      <h3>1. Project overview</h3>
-      <p>The problem, the three-stage method and the main findings.</p>
-    </div>
-    <div class="video">
-      <div class="video-frame">
-        <!-- <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID_2" title="Live demo" allowfullscreen></iframe> -->
-        <div class="placeholder">Video coming soon</div>
-      </div>
-      <h3>2. Live demo</h3>
-      <p>Running <code>demo.py</code> to generate default and tuned private networks from Cora and compare them with the real one.</p>
-    </div>
-    <div class="video">
-      <div class="video-frame">
-        <!-- <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID_3" title="Results walkthrough" allowfullscreen></iframe> -->
-        <div class="placeholder">Video coming soon</div>
-      </div>
-      <h3>3. Results walkthrough</h3>
-      <p>Optimiser ranking, Pareto fronts and the final networks on all five data sets.</p>
-    </div>
+  <h2>Demonstration video</h2>
+  <div class="demo-video">
+    <video controls preload="metadata" poster="assets/demo_poster.jpg">
+      <source src="assets/demo.mp4" type="video/mp4">
+      Your browser cannot play this video. <a href="assets/demo.mp4">Download it here</a>.
+    </video>
+    <p>Running <code>python demo.py --dataset cora</code>: the script builds a default private network and a tuned private network at &epsilon; = 1, compares both with the real Cora network, and draws the three side by side.</p>
   </div>
   <figure>
     <img src="assets/demo_cora.jpg" alt="Output of demo.py on Cora: real, default private and tuned networks">

@@ -104,6 +104,9 @@ th { font-weight: 600; background: var(--soft); }
 .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .placeholder { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 15px; }
 
+.demo-video video { width: 100%; height: auto; border: 1px solid var(--line); border-radius: 4px; background: #000; }
+.demo-video p { color: var(--muted); font-size: 15px; margin: 8px 0 0; }
+
 /* timeline */
 .timeline { list-style: none; padding: 0; margin: 0; border-left: 2px solid var(--line); }
 .timeline li { position: relative; display: grid; grid-template-columns: 140px 1fr; gap: 14px; padding: 0 0 18px 22px; }
